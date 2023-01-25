@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="panel-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><h4><b>LIST OF EQUIPEMENT</b></h4></div>
+        <div class="panel-body">
+          
+          <br>
+          <input class="form-control" id="myInput" type="text" placeholder="Search..">
+          <br>
+
+
+            <div class="panel panel-info">
+              <div class="panel-heading">LIST OF EMPOLYEES</div>
+                <div class="panel-body">
+                  <table class="table table-bordered table-striped" id="myTable1">
+                    <tr class="info">
+                      <th>Nom & Prénom</th>
+                     </tr> 
+                     <tr *ngFor="let emp of employee"class=" list-group-item clickable " (click)="getequipements(emp)">
+                      <td>{{emp.nom}} {{emp.prenom}} </td>
+
+                 
+                </table>
+                </div>
+            </div>
+
+
+          
+
+
+            <div class="panel panel-info" *ngIf="equipement">
+              <div class="panel-heading">LIST OF EQUIPEMENTS</div>
+              <div class="panel-body">
+               
+                 <table class="table table-bordered table-striped" *ngFor="let equip of equipement._embedded.equipements">
+                  <thead>
+                    <tr class="info">
+                      <th>Type</th>
+                      <th>Marque</th>
+                      <th>Réference</th>
+                      <th>Configuration</th>
+                      <th>Date Acquisition</th>
+                   </tr>
+                   </thead>
+                  <tbody id="myTable">
+                    <tr>
+                      <td>{{equip.type}}</td>
+                      <td>{{equip.marque}}</td>
+                      <td>{{equip.reference}}</td>
+                      <td>{{equip.configuration}} </td>
+                      <td>{{equip.date_acquisition}} </td>
+                    </tr>
+                  </tbody>
+                </table>  
+              </div>
+            </div>
+          </div>      
+        </div>
+      </div>
+  </div>
+  
+  
+  
+  

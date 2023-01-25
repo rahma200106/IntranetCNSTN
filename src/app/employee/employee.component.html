@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4><b>LIST OF EMPLOYEES</b></h4>
+      </div>
+      <div class="panel-body">
+        <br>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+
+        
+        <div class="row">
+
+          <div *ngIf="employee" class="col-sm-3">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr class="info">
+                  <th>Matricule</th>
+                  <th>Grade</th>
+                  <th>Nom</th>
+                  <th>Prenom</th>
+                  <th>Mettre à jour</th>
+                  <th>Supprimer</th>
+                </tr>
+              </thead>
+              <tbody id="myTable">
+                <tr *ngFor="let emp of employee">
+                  <td>{{emp.matricule}}</td>
+                  <td>{{emp.grade}}</td>
+                  <td>{{emp.nom}}</td>
+                  <td>{{emp.prenom}}</td>
+                  <td><button type="button" class="btn btn-success"  (click)="Updateemp(emp.matricule)">Mise à jour</button></td>
+                  <td><button type="button" class="btn btn-danger" (click)="clickMethod(emp.matricule, emp.nom)">Supprimer</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

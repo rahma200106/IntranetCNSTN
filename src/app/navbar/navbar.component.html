@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand active" href="#"><strong>CNSTN</strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="#"><a routerLink="home">Présentation</a></li>
+   
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administration
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="ajouteremp">Ajouter un employée</a></li>
+          <li><a routerLink="listemployee">gérer les employées</a></li>
+          <li><a routerLink="listequipement">gérer les équipement</a></li>
+          <li><a routerLink="demandematerielle">gérer les Demandes</a></li>
+         
+        </ul>
+      <li class="#"><a routerLink="home">Réservation</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Formulaires
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="formulaireDG">Direction Génerale</a></li>
+          <li><a routerLink="formulaireDSC"> Direction des Services Communs</a></li>
+          <li><a routerLink="formulaireDVPS">Direction Valorisation des Projets & Services</a></li>
+          <li><a routerLink="formulaireDSIN">Direction de la Sûreté Nucléaires </a></li>
+        </ul>
+
+      <li><a routerLink="guides">Guides&Procédures</a></li>
+      <li><a routerLink="logiciels">Nos logiciels</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="contacts">Nos Contacts
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="DG">Direction Génerale</a></li>
+          <li><a routerLink="DSIN">DSN</a></li>
+          <li><a routerLink="DAAF">DAAF</a></li>
+          <li><a routerLink="DCG">DCG</a></li>
+          <li><a routerLink="DDVP">DDVP</a></li>
+          <li><a routerLink="DREM">DREM</a></li>
+          <li><a routerLink="DREV">DREV</a></li>
+        </ul>
+
+
+
+    </ul>
+   
+    
+  </div>
+
+</nav>
+
+<router-outlet></router-outlet>
