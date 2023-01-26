@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import *as $ from 'jquery'
+import dsn from './contactdsn.json';
+
+interface contactdsn {
+  id: Number;
+  nom: String;
+  mail: String;
+  Tel: Number;
+  
+} 
 
 @Component({
   selector: 'app-dsin',
@@ -11,7 +20,7 @@ export class DSINComponent
     little='angular-bootstrap-scaffolding';
   
   
-  
+  dsncontact:contactdsn[]=dsn;
     ngOnInit(){
       $(document).ready(function(){
         $("#myInput").on("keyup", function() {
